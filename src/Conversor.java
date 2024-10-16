@@ -36,7 +36,7 @@ public class Conversor {
         String jsonResponse = response.body();
         System.out.println(jsonResponse);
 
-        // Passo 4: Parse do JSON com Gson
+        // Parse do JSON com Gson
         Gson gson = new Gson();
         ExchangeRateResponse exchangeRateResponse = gson.fromJson(jsonResponse, ExchangeRateResponse.class);
 
