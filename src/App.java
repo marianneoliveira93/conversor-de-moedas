@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Supondo que você já tenha a lógica para obter os rates
+        
         String jsonResponse = "{\n" +
                 "  \"base_code\": \"USD\",\n" +
                 "  \"conversion_rates\": {\n" +
@@ -17,7 +17,7 @@ public class App {
                 "  }\n" +
                 "}";
 
-        // Inicializando Gson
+        // Iniciando com Gson
         Gson gson = new Gson();
         ExchangeRateResponse exchangeRateResponse = gson.fromJson(jsonResponse, ExchangeRateResponse.class);
         Map<String, Double> rates = exchangeRateResponse.getConversionRates();
@@ -27,18 +27,18 @@ public class App {
         int choice;
 
         do {
-            // Exibindo o menu
+            // Exibição do menu
             System.out.println("=== Conversor de Moedas ===");
             System.out.println("1. Converter Moeda");
             System.out.println("2. Sair");
             System.out.print("Escolha uma opção: ");
 
-            // Lendo a escolha do usuário
+            // Escolha do usuário
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                    // Capturando a entrada do usuário para conversão
+                    // Vai depender da escolha do usuário
                     System.out.print("Insira o valor a ser convertido: ");
                     double amount = scanner.nextDouble();
 
