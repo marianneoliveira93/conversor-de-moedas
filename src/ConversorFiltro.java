@@ -19,13 +19,13 @@ public class ConversorFiltro {
         // Inicializando Gson
         Gson gson = new Gson();
 
-        // Deserializando a resposta
+        // Convertendo a resposta
         ExchangeRateResponse exchangeRateResponse = gson.fromJson(jsonResponse, ExchangeRateResponse.class);
 
-        // Obtendo o mapa de taxas de conversão
+        // Obtendo  taxas de conversão
         Map<String, Double> rates = exchangeRateResponse.getConversionRates();
 
-        // Códigos de moeda que queremos filtrar
+        // Códigos utilizados para as moedas que queremos vão ser filtradas
         String[] currencyCodes = {"ARS", "BOB", "BRL", "CLP", "COP", "USD"};
 
         // Exibindo os valores filtrados
